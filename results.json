@@ -1,0 +1,100 @@
+{
+    "group_members": [
+        {
+            "name": "Abdelrahman Mostafa Abdelmonem Farrag",
+            "id": "2401247514"
+        },
+        {
+            "name": "Ramadan Hesham Ramadan",
+            "id": "2401248820"
+        },
+        {
+            "name": "Abdullah Ahmed Adly",
+            "id": "2401246061"
+        },
+        {
+            "name": "Abdulrahman Gaber Abdo Gaber",
+            "id": "2401242447"
+        },
+        {
+            "name": "Ebrahim Hany Ebrahim",
+            "id": "2401245488"
+        }
+    ],
+    "best_hyperparameters": {
+        "KNN_Regression": {
+            "n_neighbors": 21,
+            "p": 2,
+            "weights": "distance",
+            "CV_R2": 0.933
+        },
+        "KNN_Classification": {
+            "n_neighbors": 21,
+            "p": 1,
+            "weights": "distance",
+            "CV_Accuracy": 0.9183
+        },
+        "SVR_Regression": {
+            "C": "1",
+            "gamma": "scale",
+            "kernel": "rbf",
+            "CV_R2_subset": 0.9408
+        },
+        "SVC_Classification": {
+            "C": "10",
+            "gamma": "scale",
+            "kernel": "linear",
+            "CV_Accuracy_subset": 1.0
+        },
+        "GBR_Regression": {
+            "learning_rate": 0.1,
+            "max_depth": 5,
+            "n_estimators": 100,
+            "CV_R2": 0.9608
+        },
+        "GBC_Classification": {
+            "learning_rate": 0.05,
+            "max_depth": 3,
+            "n_estimators": 100,
+            "CV_Accuracy": 1.0
+        }
+    },
+    "cv_stability": {
+        "regression": {
+            "model": "GradientBoostingRegressor (Unified Pipeline)",
+            "metric": "R\u00b2",
+            "folds": [
+                0.9724,
+                0.9539,
+                0.9704,
+                0.9465,
+                0.9602
+            ],
+            "mean": 0.9607,
+            "std": 0.0098
+        },
+        "classification": {
+            "model": "GradientBoostingClassifier (Unified Pipeline)",
+            "metric": "Accuracy",
+            "folds": [
+                1.0,
+                1.0,
+                1.0,
+                1.0,
+                1.0
+            ],
+            "mean": 1.0,
+            "std": 0.0
+        }
+    },
+    "final_test_metrics": {
+        "regression": {
+            "best_model": "GBR",
+            "R2": 0.9685
+        },
+        "classification": {
+            "best_model": "SVC",
+            "Accuracy": 1.0
+        }
+    }
+}
